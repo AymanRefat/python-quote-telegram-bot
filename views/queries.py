@@ -3,7 +3,7 @@ from telebot import types
 from views import keyboards as kb 
 from api import  quotes
 
-quote_api = quotes.QuotesAPI
+quote_api = quotes.QuotesAPI()
 
 @bot.callback_query_handler(func=lambda call: call.data==kb.CallBackData.random_quote.value)
 def send_random_quote(query:types.CallbackQuery): 
