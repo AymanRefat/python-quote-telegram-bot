@@ -1,5 +1,4 @@
 from telebot import types
-from app.settings import MY_TELEGRAM_LINK
 from enum import Enum
 
 class CallBackData(Enum):
@@ -12,11 +11,6 @@ class CallBackData(Enum):
 
 
 
-start_keyboard = types.InlineKeyboardMarkup(row_width=3)
-owner = types.InlineKeyboardButton("Message Owner",url=MY_TELEGRAM_LINK,)
-share = types.InlineKeyboardButton("Share me",
-	switch_inline_query="I am Productive Bot Designed with ♥ by @AymanRefat1 , I will Help You be More Productive and Solve your Problems")
-start_keyboard.row(owner,share)
 
 
 quote_keyboard = types.InlineKeyboardMarkup(row_width=2)

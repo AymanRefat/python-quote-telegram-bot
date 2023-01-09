@@ -1,7 +1,7 @@
-from app.bot import bot
+from bot.settings import bot
 from telebot import types
-from views import keyboards as kb
-from api import quotes
+from quotes.views import keyboards as kb
+from quotes.api import quotes
 
 quote_api = quotes.QuotesAPI()
 

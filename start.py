@@ -1,17 +1,15 @@
-from app.bot import bot 
-from app.utils import set_commands , set_queries
+from bot import importing, settings
+from helpers import functions as f
+
+logger = f.get_logger()
 
 
-
-def start()->None:
-	set_commands()
-	set_queries()
-	bot.infinity_polling()  
-
-
-
+def start() -> None:
+    importing.import_bot()
+    logger.info("Bot is Installed")
+    f.import_all_features(settings.INSTALLED_FEATURES)
+    settings.bot.infinity_polling()
 
 
 if __name__ == "__main__":
-	start()
-
+    start()
